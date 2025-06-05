@@ -18,7 +18,6 @@ exec('npx cypress run --headed', async (error, stdout, stderr) => {
 
   fs.writeFileSync(outputPath, output);
 
-  // Match error blocks first
 const errorRegex = /(AssertionError|Error|Timed out).*?(?=\n\s*\n|[0-9]+\)|\n[A-Z])/gs;
 const matches = [...output.matchAll(errorRegex)];
 
