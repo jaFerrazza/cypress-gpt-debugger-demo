@@ -2,7 +2,7 @@ describe('GPT Debug Demo', () => {
   it('should fail and log error manually', () => {
     cy.visit('https://example.com');
 
-    cy.get('h1').then(($el) => {
+    cy.get('h1').then(($el) => { 
       try {
         const actual = $el.text();
         const expected = 'Hola GPT';
